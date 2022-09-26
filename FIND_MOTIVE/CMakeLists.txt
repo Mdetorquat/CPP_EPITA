@@ -1,7 +1,16 @@
 cmake_minimum_required(VERSION 3.0)
 
-#set the project name
-project(FIND_MOTIVE)
+# set the project name
+project(IS_PRIME)
 
-add_executable(main main.cpp findmotive.cpp)
+set(SRCS
+    findmotive.cpp
+	main.cpp
+	)
 
+set(HEADER
+    findmotive.h
+    )
+
+# add the executable
+add_executable(main ${SRCS} ${HEADER})
