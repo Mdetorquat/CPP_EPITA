@@ -4,50 +4,58 @@ using namespace std;
 
 Vector::Vector()
 {
-
+	x = 0;
+	y = 0;
 }
 
-Vector::Vector(float x, float y, float z)
+Vector::Vector(int i, int j) : x{i}, y{j}
 {
-	i[0] = x;
-	i[1] = y;
+	
 }
 
 // Operation addition
-Vector Vector::operator+=(const Vector vect&)
+Vector Vector::operator+=(const Vector& vect)
 {
-	i[0]+=vect.i[0];
-	i[1]+=vect.i[1];
+	x+=vect.x;
+	y+=vect.y;
 
 	return *this;
 }
 
-Vector Vector::operator+(const Vector vect&)
+Vector& Vector::operator+(const Vector& vect)
 {
-	return Vector(i[0]+vect.i[0], i[1]+vect.i[1]);
+	return Vector(x+vect.x, y+vect.y);
 }
 
 // Operation soustraction
-Vector Vector::operator-=(const Vector vect&)
+Vector& Vector::operator-=(const Vector& vect)
 {
-	i[0]-=vect.i[0];
-	i[1]-=vect.i[1];
+	x-=vect.x;
+	y-=vect.y;
 
 	return *this;
 }
 
-Vector Vector::operator-(const Vector vect&)
+Vector& Vector::operator-(const Vector& vect)
 {
-	return Vector(i[0]-vect.i[0], i[1]-vect.i[1]);
+	return Vector(x-vect.x, y-vect.y);
 }
 
 
 // Operation multiplication
-Vector Vector::operator*=(const Vector vect&)
+Vector& Vector::operator*=(const Vector& vect)
 {
-	i[0]*=vect.i[0];
-	i[1]*=vect.i[1];
+	x*=vect.x;
+	y*=vect.y;
 
+	return *this;
+}
+
+Vector& Vector::operator*=(int i)
+{
+	x *= i;
+	y *= i;
+	
 	return *this;
 }
 
