@@ -1,10 +1,4 @@
 cmake_minimum_required(VERSION 3.0)
-
-project(CARTESIAN_VECTOR_PARAM)
-
-set(HEADERS
-	config.h
-	vector.hh
-	)
-
-add_executable(main main.cc ${HEADERS})
+project(cartesian_vector_param)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(main vector.cpp main_new.cc)
