@@ -1,7 +1,3 @@
 #gitignore
 
-cmake_install.cmake
-CMakeFiles
-Makefile
-CMakeCache.txt
-main
+build
