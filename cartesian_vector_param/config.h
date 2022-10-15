@@ -1,3 +1,5 @@
+// DO NOT CHANGE THIS
+
 #ifndef NDIM
     #define NDIM 2
 #endif
