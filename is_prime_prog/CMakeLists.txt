@@ -1,16 +1,9 @@
 cmake_minimum_required(VERSION 3.0)
 
 # set the project name
-project(IS_PRIME)
+project(is_prime_prog)
 
-set(SRCS
-    isprime.cpp
-	main.cpp
-	)
-
-set(HEADERS
-    isprime.h
-	)
+set(CMAKE_CXX_STANDARD 14)
 
 # add the executable
-add_executable(main ${SRCS} ${HEADERS})
+add_executable(main main.cpp)

@@ -1,0 +1,3 @@
+Les programmes marchent très bien mais l'architecture est simpliste.
+Séparer les programmes dans des fichiers individuels avec des headers est une bonne pratique !
+Nous vous conseillons vivement de le faire pour le prochain tp

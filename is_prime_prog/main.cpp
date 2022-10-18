@@ -1,17 +1,27 @@
 #include <iostream>
 #include "isprime.h"
 
+#include <iostream>
+
 int main()
 {
-	int number;
+    int n;
+    
+    while (std::cin >> n)
+    {
+		bool prime = true;
 
-	while (std::cin >> number)
-	{
-		if (!isprime(number))
-			std::cout << number << " is a prime: False\n" << std::endl;
-		else
-			std::cout << number << " is a prime: True\n" << std::endl;
-	}
+		if (n <= 1)
+			prime =  false;
+ 
+		for (int i = 2; i < n; i++)
+		{
+			if (n % i == 0)
+			prime = false;
+		}
 
-	return 0;
+		prime ? std::cout << n << " is a prime: True\n" : std::cout << n << " is a prime: False\n";
+    }
+
+    return 0;
 }
