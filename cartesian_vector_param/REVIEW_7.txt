@@ -1,0 +1,6 @@
+Repo git de Marie: problème lors de la compilation
+Erreur : dans ton main_new.cc: "undefined reference to Vector::Vector()
+
+Repo git de Raph: pareil, problème pendant la compilation
+Je pense que t'as oublié des include
+Erreur : no match for operator<< (operand types are std::ostream {aka std::basic_ostream<char>} and Vector)
