@@ -1,5 +1,4 @@
 #include "vector.hh"
-
 #include <iostream>
 #include <ostream>
 

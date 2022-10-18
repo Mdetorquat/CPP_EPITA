@@ -1,12 +1,12 @@
 // vector-test.cc
 #include <iostream>
-
-#include "vector.hh"
-
 #include <vector>
 #include <cstring> //strcmp
 
+#include "vector.hh"
+
 #if NDIM == 2
+
 void testInit()
 {
     auto u = Vector{};
