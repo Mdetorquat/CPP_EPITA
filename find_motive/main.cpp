@@ -1,33 +1,24 @@
 #include <iostream>
 #include <fstream>
-
-#include "findmotive.h"
+#include <iosfwd>
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
+    ifstream file(argv[1]);
+    if (file.fail())
     {
-        std::cout << "Error in number of arguments" << std::endl;
+        std::cout << "The file " << argv[1] << " could not be opened." << std::endl;
         return 1;
     }
 
-    std::string path = argv[1];
-    std::string pattern = argv[2];
+    string pattern;
+    int count = 0;
 
-    std::ifstream file (path);
-
-    if (!file.is_open())
+    while(file >> pattern)
     {
-        std::cout<<"The file " << path << " could not be opened." << std::endl;
-        return 1;
+       if (pattern.find(argv[2]) != string::npos)
+            count++;
     }
-
-    std::string str;
-    str = std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-
-    int count = find_motive(str, pattern);
-
-    std::cout<<"The file " << path << " contains "<< count << " words containing the motive " << pattern << std::endl;
-
+    std::cout << "The file " << argv[1] << " contains "<< count << " words containing the motive " << argv[2] << std::endl;
     return 0;
 }
