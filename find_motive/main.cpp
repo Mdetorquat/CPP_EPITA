@@ -2,14 +2,14 @@
 #include <fstream>
 #include <iosfwd>
 
-
+using namespace std;
 
 int main(int argc, char *argv[])
 {
     ifstream file(argv[1]);
     if (file.fail())
     {
-        std::cout << "The file " << argv[1] << " could not be opened." << std::endl;
+        cout << "The file " << argv[1] << " could not be opened." << endl;
         return 1;
     }
 
@@ -21,6 +21,6 @@ int main(int argc, char *argv[])
        if (pattern.find(argv[2]) != string::npos)
             count++;
     }
-    std::cout << "The file " << argv[1] << " contains "<< count << " words containing the motive " << argv[2] << std::endl;
+    cout << "The file " << argv[1] << " contains "<< count << " words containing the motive " << argv[2] << endl;
     return 0;
 }
