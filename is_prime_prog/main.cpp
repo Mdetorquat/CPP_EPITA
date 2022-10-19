@@ -1,7 +1,4 @@
 #include <iostream>
-#include "isprime.h"
-
-#include <iostream>
 
 int main()
 {
@@ -9,15 +6,16 @@ int main()
     
     while (std::cin >> n)
     {
+		int i;
 		bool prime = true;
 
 		if (n <= 1)
 			prime =  false;
  
-		for (int i = 2; i < n; i++)
+		for (i = 2; i < n; i++)
 		{
 			if (n % i == 0)
-			prime = false;
+				prime = false;
 		}
 
 		prime ? std::cout << n << " is a prime: True\n" : std::cout << n << " is a prime: False\n";
