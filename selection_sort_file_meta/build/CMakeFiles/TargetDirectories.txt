@@ -1,3 +1,0 @@
-/home/maxencede-torquat-de-la-coulerie/CPP_EPITA/selection_sort_file_meta/build/CMakeFiles/main.dir
-/home/maxencede-torquat-de-la-coulerie/CPP_EPITA/selection_sort_file_meta/build/CMakeFiles/edit_cache.dir
-/home/maxencede-torquat-de-la-coulerie/CPP_EPITA/selection_sort_file_meta/build/CMakeFiles/rebuild_cache.dir
